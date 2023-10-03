@@ -7,7 +7,7 @@ import { PATHS } from "~/routes/paths";
 import { PrivateRoute } from "~/routes/private-route";
 
 const Home = lazy(async () => await import("~/pages/home/home"));
-const Profile = lazy(async () => await import("~/pages/profile/profile"));
+const Band = lazy(async () => await import("~/pages/band/band"));
 
 export const router = createBrowserRouter([
   {
@@ -24,8 +24,8 @@ export const router = createBrowserRouter([
         element: <PrivateRoute outlet={<Home />} />,
       },
       {
-        path: PATHS.PROFILE,
-        element: <PrivateRoute outlet={<Profile />} />,
+        path: PATHS.BAND,
+        element: <PrivateRoute outlet={<Band />} />,
       },
     ],
   },
