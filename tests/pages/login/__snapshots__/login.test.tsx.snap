@@ -38,7 +38,7 @@ exports[`<Login /> should be able to mount <Login /> component 1`] = `
 }
 
 .c0 {
-  background-color: #77dd77;
+  background-color: #f26419;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -83,7 +83,7 @@ exports[`<Login /> should be able to mount <Login /> component 1`] = `
 }
 
 .c8 {
-  background-color: #f26419;
+  background-color: #01c4e7;
   border-radius: 4px;
   padding: 8px;
   border: none;
@@ -95,7 +95,7 @@ exports[`<Login /> should be able to mount <Login /> component 1`] = `
 }
 
 .c8:hover {
-  background-color: #c25014;
+  background-color: #019db9;
   cursor: pointer;
 }
 

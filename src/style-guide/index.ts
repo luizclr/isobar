@@ -4,17 +4,6 @@ const initialStyleGuide: StyledGuideProps = {
   styleGuide: {
     colors: {
       primary: {
-        darkest: "#00272e",
-        darker: "#004e5c",
-        dark: "#01768b",
-        tinyDark: "#019db9",
-        medium: "#01c4e7",
-        tinyLight: "#34d0ec",
-        light: "#67dcf1",
-        lighter: "#99e7f5",
-        lightest: "#ccf3fa",
-      },
-      secondary: {
         darkest: "#301405",
         darker: "#61280a",
         dark: "#913c0f",
@@ -24,6 +13,17 @@ const initialStyleGuide: StyledGuideProps = {
         light: "#f7a275",
         lighter: "#fac1a3",
         lightest: "#fce0d1",
+      },
+      secondary: {
+        darkest: "#00272e",
+        darker: "#004e5c",
+        dark: "#01768b",
+        tinyDark: "#019db9",
+        medium: "#01c4e7",
+        tinyLight: "#34d0ec",
+        light: "#67dcf1",
+        lighter: "#99e7f5",
+        lightest: "#ccf3fa",
       },
       neutral: {
         darkest: "#1c1c1c",

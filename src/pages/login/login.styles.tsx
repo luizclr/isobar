@@ -2,7 +2,7 @@ import { getColor, getFontSize, getFontWeight, getSize } from "react-styled-guid
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-color: ${getColor(({ success }) => success.medium)};
+  background-color: ${getColor(({ primary }) => primary.medium)};
   display: flex;
   justify-content: center;
   align-items: center;
