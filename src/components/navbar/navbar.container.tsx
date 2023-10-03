@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { ThemeTypes, useTheme } from "react-styled-guide";
 
-import { BaseSidebar } from "~/components/sidebar/sidebar";
+import { BaseNavbar } from "~/components/navbar/navbar";
 import { PATHS } from "~/routes/paths";
 import { useApp } from "~/state/app/hook";
 import { useAuth } from "~/state/auth/hook";
 
-export const Sidebar: React.FC = () => {
+export const Navbar: React.FC = () => {
   const { storageService } = useApp();
   const { theme, setDarkTheme, setLightTheme } = useTheme();
   const { signOut } = useAuth();
@@ -30,7 +30,7 @@ export const Sidebar: React.FC = () => {
   };
 
   return (
-    <BaseSidebar
+    <BaseNavbar
       handleLogoutClick={handleLogoutClick}
       handleChangeThemeClick={handleChangeThemeClick}
     />

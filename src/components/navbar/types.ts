@@ -1,4 +1,4 @@
-export type BaseSidebarProps = {
+export type BaseNavbarProps = {
   handleLogoutClick: () => void;
   handleChangeThemeClick: () => void;
 };

@@ -17,13 +17,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   }
 
-  div {
-    background-color: ${getColorByTheme(
-      ({ neutral }) => neutral.lightest,
-      ({ neutral }) => neutral.darkest
-    )};
-  }
-
   &::-webkit-scrollbar {
     width: ${getSize(({ nano }) => nano)};
   }

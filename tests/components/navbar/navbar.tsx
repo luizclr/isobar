@@ -1,7 +1,7 @@
 import { fireEvent, screen } from "@testing-library/react";
 import { StyleGuide } from "react-styled-guide";
 
-import { Sidebar } from "~/components/sidebar/sidebar.container";
+import { Navbar } from "~/components/navbar/navbar.container";
 import initialStyleGuide from "~/style-guide";
 
 import { render } from "#/test-utils/render";
@@ -12,9 +12,9 @@ const makeSut = (): {
   logoutButton: HTMLElement;
   styleGuide: StyleGuide;
 } => {
-  const { getByTestId } = render(<Sidebar />);
+  const { getByTestId } = render(<Navbar />);
 
-  const sut = getByTestId("sidebar");
+  const sut = getByTestId("navbar");
 
   const changeThemeButton = screen.getByText("Change theme");
   const logoutButton = screen.getByText("Logout");
@@ -24,7 +24,7 @@ const makeSut = (): {
   return { sut, changeThemeButton, logoutButton, styleGuide };
 };
 
-describe("<Sidebar />", () => {
+describe("<Navbar />", () => {
   it("should change theme to DARK when click in 'Change Theme' button", () => {
     // given
     localStorage.setItem("theme", "LIGHT");
