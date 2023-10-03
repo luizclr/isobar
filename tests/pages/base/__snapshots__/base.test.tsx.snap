@@ -123,7 +123,7 @@ exports[`<Base /> should be able to mount <Base /> component 1`] = `
       <h1
         class="c3"
       >
-        React Base
+        Isobar
       </h1>
       <div
         class="c4"

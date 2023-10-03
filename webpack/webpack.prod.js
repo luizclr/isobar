@@ -18,7 +18,7 @@ module.exports = merge(common, {
   plugins: [
     new CleanWebpackPlugin(),
     new FaviconsWebpackPlugin({
-      logo: path.join(__dirname, "..", "public", "favicon.ico"),
+      logo: path.join(__dirname, "..", "public", "logo.png"),
     }),
     new CopyWebpackPlugin({
       patterns: [

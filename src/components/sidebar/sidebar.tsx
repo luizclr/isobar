@@ -8,8 +8,8 @@ import {
   Text,
   Version,
 } from "~/components/sidebar/sidebar.styles";
-import { BaseSidebarProps } from "~/components/sidebar/types";
-import { PATHS } from "~/routes/paths";
+import {BaseSidebarProps} from "~/components/sidebar/types";
+import {PATHS} from "~/routes/paths";
 
 export const BaseSidebar: React.FC<BaseSidebarProps> = ({
   handleLogoutClick,
@@ -17,7 +17,7 @@ export const BaseSidebar: React.FC<BaseSidebarProps> = ({
 }: BaseSidebarProps) => {
   return (
     <SidebarWrapper data-testid="sidebar">
-      <Text>React Base</Text>
+      <Text>Isobar</Text>
       <SidebarContent>
         <List>
           <ListItem>

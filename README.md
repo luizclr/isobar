@@ -1,9 +1,3 @@
-# 🚧 work in progress 🚧
-
-> ### **warning**: People are still working here. The features in this repository may not be completed and bugs can be found.
-
-<br/> 
-
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
 ![Babel](https://img.shields.io/badge/Babel-F9DC3e?style=for-the-badge&logo=babel&logoColor=black)
@@ -18,17 +12,18 @@
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 
 
-# 🔍 React Base
+# 🔍 Isobar
 
-## 🌐 [react-base.netlify.app/](https://react-base.netlify.app/)
-![example workflow](https://github.com/luizclr/react-base/actions/workflows/main.yml/badge.svg)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3686df98-70c6-43be-bb8b-f5f7b5b238c9/deploy-status)](https://app.netlify.com/sites/react-base/deploys)
+## 🌐 [isobar-react-app.netlify.app/](https://isobar-react-app.netlify.app/)
+![example workflow](https://github.com/luizclr/isobar/actions/workflows/main.yml/badge.svg)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3686df98-70c6-43be-bb8b-f5f7b5b238c9/deploy-status)](https://app.netlify.com/sites/isobar-react-app/deploys)
 
 
 ## 📖 Tabe of contents
 
 1. [💡 Motivation](#motivation)
     - [Intro](#intro)
+    - [Before starting](#before-starting)
     - [Technologies used](#technologies-used)
 1. [📋 Requirements](#requirements)
 2. [🛠️ Installation and usage](#installation-and-usage)
@@ -43,9 +38,18 @@
 
 ### Intro:
 
-The main objective of this repository is to be used as a template-like to your react projects with many technologies already setted up from scratch.
+The main objective of this repository is create a react application to list and search bands.
 
-> Fork this repository and start working over it...
+### Before starting
+
+> This project was created based on [luizclr/react-base](https://github.com/luizclr/react-base) template and using [react-styled-guide](https://www.npmjs.com/package/react-styled-guide) package.
+
+> The application is hosted on [isobar-react-app.netlify.app](https://isobar-react-app.netlify.app) and you can access any time you want.
+
+> You must create an `.env` file based on `.env.example` in root folder.
+
+> This application is using a fake authentication API! It means that you don't need to create any other account. You just need to type any fake e-mail but with a valid format and a random string greater or equal to 8 characters as password.
+eg: `e-mail: example@email.com, password: 12345678`.
 
 ### Technologies used:
 
@@ -139,7 +143,7 @@ yarn start
 
 create a docker network:
 ```shell
-docker network create react-base
+docker network create isobar
 ```
 
 build image:

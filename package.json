@@ -1,9 +1,9 @@
 {
-  "name": "react-base",
+  "name": "isobar",
   "version": "0.0.1",
   "description": "",
   "main": "dist/index.html",
-  "homepage": "https://github.com/luizclr/react-base#readme",
+  "homepage": "https://github.com/luizclr/isobar#readme",
   "author": "Luiz Claudio",
   "license": "ISC",
   "scripts": {
@@ -21,11 +21,11 @@
     "prepare": "husky install"
   },
   "bugs": {
-    "url": "https://github.com/luizclr/react-base/issues"
+    "url": "https://github.com/luizclr/isobar/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luizclr/react-base.git"
+    "url": "git+https://github.com/luizclr/isobar.git"
   },
   "devDependencies": {
     "@babel/core": "^7.20.7",

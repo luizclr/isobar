@@ -1,9 +1,9 @@
 version: "3.8"
 
 services:
-  react-base-prod:
-    image: react-base-prod
-    container_name: react-base-prod
+  isobar-prod:
+    image: isobar-prod
+    container_name: isobar-prod
     build:
       dockerfile: docker/prod/Dockerfile
       context: .
@@ -13,8 +13,8 @@ services:
       - "${PWD}:/app"
       - "/app/node_modules"
     networks:
-      - react-base
+      - isobar
 
 networks:
-  react-base:
+  isobar:
     external: true

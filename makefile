@@ -1,4 +1,4 @@
-CONTAINER_NAME=react-base
+CONTAINER_NAME=isobar
 
 # build image
 build:
