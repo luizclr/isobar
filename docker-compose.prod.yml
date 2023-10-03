@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  react-base-prod:
+    image: react-base-prod
+    container_name: react-base-prod
+    build:
+      dockerfile: docker/prod/Dockerfile
+      context: .
+    expose:
+      - 80
+    volumes:
+      - "${PWD}:/app"
+      - "/app/node_modules"
+    networks:
+      - react-base
+
+networks:
+  react-base:
+    external: true

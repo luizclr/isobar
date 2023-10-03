@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "strict": true,
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "lib": ["dom", "DOM.Iterable", "ES5", "ES2015", "ES2016"],
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "target": "ES2019",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": true,
+    "rootDirs": ["src", "tests"],
+    "resolveJsonModule": true,
+    "paths": {
+      "~/*": ["./src/*"],
+      "#/*": ["./tests/*"]
+    }
+  },
+  "include": ["src", "tests", "./.eslintrc.js"],
+  "exclude": ["src/index.d.ts"]
+}

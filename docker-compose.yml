@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  react-base:
+    image: react-base
+    container_name: react-base
+    build:
+      dockerfile: docker/dev/Dockerfile
+      context: .
+    stdin_open: true
+    ports:
+      - "4000:4000"
+    volumes:
+      - "${PWD}:/app"
+      - "/app/node_modules"
+    networks:
+      - react-base
+
+networks:
+  react-base:
+    external: true
