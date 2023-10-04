@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import { AxiosAdapter } from "~/infra/http/axios-adapter";
 import AuthService from "~/infra/services/auth/auth";
+import AppBandService from "~/infra/services/band/band";
 import { LocalStorageService } from "~/infra/services/storage/local-storage/local-storage";
 import UserService from "~/infra/services/user/user";
 import { initialDispatchesState } from "~/state";
@@ -20,6 +21,7 @@ const mockServiceState: ServicesTypes = {
   authService: new AuthService(httpClient),
   storageService: new LocalStorageService(),
   userService: new UserService(httpClient),
+  bandService: new AppBandService(httpClient),
 };
 
 export const initialGlobalProps: GlobalProviderProps = {

@@ -5,11 +5,12 @@ import { UseAppTypes } from "~/state/app/hook/types";
 import GlobalContext from "~/state/global/context";
 
 export const useApp = (): UseAppTypes => {
-  const { app, appDispatch, storageService } = useContext(GlobalContext);
+  const { app, appDispatch, storageService, bandService } = useContext(GlobalContext);
 
   return {
     ...app,
     storageService,
+    bandService,
     dispatch: appDispatch,
     setIsLoading: setIsLoading(appDispatch),
   };

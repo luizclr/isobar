@@ -1,5 +1,6 @@
 import { AxiosAdapter } from "~/infra/http/axios-adapter";
 import AuthService from "~/infra/services/auth/auth";
+import AppBandService from "~/infra/services/band/band";
 import { LocalStorageService } from "~/infra/services/storage/local-storage/local-storage";
 import AppUserService from "~/infra/services/user/user";
 import { AppDispatch, AppState, initialAppState } from "~/state/app";
@@ -21,10 +22,12 @@ export const initialDispatchesState: DispatchesState = {
 
 // services
 const httpClient = new AxiosAdapter(process.env.BASE_URL);
+const bandsHttpClient = new AxiosAdapter(process.env.BAND_API_URL);
 
 export const initialServicesState: ServicesTypes = {
   authService: new AuthService(httpClient),
   userService: new AppUserService(httpClient),
+  bandService: new AppBandService(bandsHttpClient),
   storageService: new LocalStorageService(),
 };
 
