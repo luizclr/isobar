@@ -1,5 +1,5 @@
 import { User } from "~/entities/user";
-import AuthService from "~/services/auth/auth";
+import AuthService from "~/infra/services/auth/auth";
 import { AuthDispatch, AuthState } from "~/state/auth";
 
 type AuthActionTypes = {

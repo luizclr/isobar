@@ -1,9 +1,9 @@
 import { StatusCodes } from "http-status-codes";
 
 import { HttpClient } from "~/data/http/http-client";
+import { UserListeners } from "~/data/services/user/types";
 import { ErrorHandler } from "~/infra/http/error-handler";
-import { GetUserByIdResponseDTO } from "~/services/user/dto/get-user-by-id-response";
-import { UserListeners } from "~/services/user/types";
+import { GetUserByIdResponseDTO } from "~/infra/services/user/dto/get-user-by-id-response";
 
 export default class UserService {
   constructor(private readonly httpClient: HttpClient) {}

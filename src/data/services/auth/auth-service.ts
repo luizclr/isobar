@@ -1,4 +1,4 @@
-import { AuthenticateListeners, AuthenticateRequest } from "~/services/auth/types";
+import { AuthenticateListeners, AuthenticateRequest } from "~/data/services/auth/types";
 
 export interface AuthService {
   authenticate: (request: AuthenticateRequest, listeners: AuthenticateListeners) => Promise<void>;

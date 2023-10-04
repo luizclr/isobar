@@ -4,9 +4,9 @@ import { ReactElement } from "react";
 import { BrowserRouter } from "react-router-dom";
 
 import { AxiosAdapter } from "~/infra/http/axios-adapter";
+import AuthService from "~/infra/services/auth/auth";
 import { LocalStorageService } from "~/infra/services/storage/local-storage/local-storage";
-import AuthService from "~/services/auth/auth";
-import UserService from "~/services/user/user";
+import UserService from "~/infra/services/user/user";
 import { initialDispatchesState } from "~/state";
 import { GlobalProvider } from "~/state/global/provider";
 import { GlobalProviderProps } from "~/state/global/provider/types";

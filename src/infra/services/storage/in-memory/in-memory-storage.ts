@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-dynamic-delete */
-import { StorageService } from "~/data/storage/storage-service";
+import { StorageService } from "~/data/services/storage/storage-service";
 import { isNil } from "~/utils";
 
 export class InMemoryStorageService implements StorageService {

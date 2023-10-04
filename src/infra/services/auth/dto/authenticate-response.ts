@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { userDTO } from "~/services/user/dto/user";
+import { userDTO } from "~/infra/services/user/dto/user";
 
 export const AuthenticateResponseDTO = z.object({
   token: z.string(),

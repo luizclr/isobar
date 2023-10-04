@@ -1,4 +1,4 @@
-import { StorageService } from "~/data/storage/storage-service";
+import { StorageService } from "~/data/services/storage/storage-service";
 import { AppDispatch, AppState } from "~/state/app";
 
 type AppActionTypes = {

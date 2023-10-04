@@ -1,11 +1,11 @@
 import { faker } from "@faker-js/faker";
 
+import { UserListeners } from "~/data/services/user/types";
 import { User } from "~/entities/user";
 import { AxiosAdapter } from "~/infra/http/axios-adapter";
-import { UserListeners } from "~/services/user/types";
-import UserService from "~/services/user/user";
+import UserService from "~/infra/services/user/user";
 
-import { UserServiceMock } from "#/services/user/user-mock";
+import { UserServiceMock } from "#/infra/services/user/user-mock";
 
 type makeSutType = {
   sut: UserService;

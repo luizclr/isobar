@@ -1,7 +1,7 @@
 import { AxiosAdapter } from "~/infra/http/axios-adapter";
+import AuthService from "~/infra/services/auth/auth";
 import { LocalStorageService } from "~/infra/services/storage/local-storage/local-storage";
-import AuthService from "~/services/auth/auth";
-import AppUserService from "~/services/user/user";
+import AppUserService from "~/infra/services/user/user";
 import { AppDispatch, AppState, initialAppState } from "~/state/app";
 import { AuthDispatch, AuthState, initialAuthState } from "~/state/auth";
 import { GlobalProviderProps } from "~/state/global/provider/types";

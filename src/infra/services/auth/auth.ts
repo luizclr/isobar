@@ -2,9 +2,9 @@ import { StatusCodes } from "http-status-codes";
 
 import { HttpClient } from "~/data/http/http-client";
 import { AuthService } from "~/data/services/auth/auth-service";
+import { AuthenticateListeners, AuthenticateRequest } from "~/data/services/auth/types";
 import { ErrorHandler } from "~/infra/http/error-handler";
-import { AuthenticateResponseDTO } from "~/services/auth/dto/authenticate-response";
-import { AuthenticateListeners, AuthenticateRequest } from "~/services/auth/types";
+import { AuthenticateResponseDTO } from "~/infra/services/auth/dto/authenticate-response";
 
 export default class AppAuthService implements AuthService {
   constructor(private readonly httpClient: HttpClient) {}

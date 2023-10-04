@@ -1,4 +1,4 @@
-import { StorageService } from "~/data/storage/storage-service";
+import { StorageService } from "~/data/services/storage/storage-service";
 import { isNil } from "~/utils";
 
 export class LocalStorageService implements StorageService {

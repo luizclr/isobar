@@ -1,8 +1,8 @@
 import { RequestHandler } from "axios-mock-adapter";
 import { StatusCodes } from "http-status-codes";
 
+import { AuthenticateRequest } from "~/data/services/auth/types";
 import { User } from "~/entities/user";
-import { AuthenticateRequest } from "~/services/auth/types";
 
 import { mock } from "#/test-utils/mock";
 
