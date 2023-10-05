@@ -1,8 +1,16 @@
 import { useEffect, useState } from "react";
+import { Col, Container, Row } from "react-grid-system";
 import { useParams } from "react-router-dom";
 
-import { Title } from "~/components/title/title";
 import { Band } from "~/entities/band";
+import {
+  AlbumImage,
+  BandWrapper,
+  BannerImage,
+  Description,
+  RoundedImage,
+  Title,
+} from "~/pages/band/band.styles";
 import { useApp } from "~/state/app/hook";
 
 const BandPage: React.FC = () => {
@@ -33,7 +41,27 @@ const BandPage: React.FC = () => {
     setIsLoading(false);
   };
 
-  return <>{!isLoading && <Title>{band?.name}</Title>}</>;
+  return (
+    <>
+      {!isLoading && band && (
+        <BandWrapper>
+          <BannerImage src={band.image} />
+          <Title>{band.name}</Title>
+          <RoundedImage src={band.image} />
+          <Description>{band.biography}</Description>
+          <Container>
+            <Row>
+              {band.albums.map((albumId) => (
+                <Col key={albumId} xs={4} sm={4}>
+                  <AlbumImage src={band.image} />
+                </Col>
+              ))}
+            </Row>
+          </Container>
+        </BandWrapper>
+      )}
+    </>
+  );
 };
 
 export default BandPage;
