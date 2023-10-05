@@ -24,7 +24,7 @@ export const router = createBrowserRouter([
         element: <PrivateRoute outlet={<Home />} />,
       },
       {
-        path: PATHS.BAND,
+        path: `${PATHS.BAND}/:id`,
         element: <PrivateRoute outlet={<Band />} />,
       },
     ],

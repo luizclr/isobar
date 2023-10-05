@@ -7,4 +7,5 @@ export type CardItemType = {
 
 export type CardListProps = {
   items: CardItemType[];
+  onItemClick?: (item: CardItemType) => void;
 };
