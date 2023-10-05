@@ -4,6 +4,7 @@ import { AppDispatch, AppState } from "~/state/app";
 
 type AppActionTypes = {
   setIsLoading: (isLoading: boolean) => void;
+  setFilter: (filter: string) => void;
   storageService: StorageService;
   bandService: BandService;
 };

@@ -1,5 +1,6 @@
 import { useContext } from "react";
 
+import { setFilter } from "~/state/app/actions/set-filter";
 import { setIsLoading } from "~/state/app/actions/set-is-loading";
 import { UseAppTypes } from "~/state/app/hook/types";
 import GlobalContext from "~/state/global/context";
@@ -13,5 +14,6 @@ export const useApp = (): UseAppTypes => {
     bandService,
     dispatch: appDispatch,
     setIsLoading: setIsLoading(appDispatch),
+    setFilter: setFilter(appDispatch),
   };
 };

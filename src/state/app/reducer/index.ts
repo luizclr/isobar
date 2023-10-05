@@ -1,5 +1,5 @@
 import { AppState, initialAppState } from "~/state/app";
-import { AppActions, AppActionTypes } from "~/state/app/reducer/types";
+import { AppActionTypes, AppActions } from "~/state/app/reducer/types";
 
 export const AppReducer = (state: AppState, action: AppActions): AppState => {
   switch (action.type) {
@@ -13,6 +13,11 @@ export const AppReducer = (state: AppState, action: AppActions): AppState => {
         ...state,
         error: true,
         isLoading: false,
+      };
+    case AppActionTypes.setFilter:
+      return {
+        ...state,
+        filter: action.payload.filter,
       };
     case AppActionTypes.reset:
       return initialAppState;
