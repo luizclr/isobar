@@ -1,6 +1,8 @@
+import { ReactElement, useEffect, useState } from "react";
 import { BsCloudSun, BsMoonStars } from "react-icons/bs";
 import { FiLogOut } from "react-icons/fi";
-import { useNavigate } from "react-router-dom";
+import { RiArrowLeftSLine } from "react-icons/ri";
+import { useLocation, useNavigate } from "react-router-dom";
 import { ThemeTypes, useTheme } from "react-styled-guide";
 
 import {
@@ -21,20 +23,39 @@ export const BaseNavbar: React.FC<BaseNavbarProps> = ({
   handleChangeThemeClick,
 }: BaseNavbarProps) => {
   const { theme } = useTheme();
+  const location = useLocation();
   const { setFilter } = useApp();
   const navigate = useNavigate();
+  const [isBandPage, setIsBandPage] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (location.pathname.startsWith(PATHS.BAND)) setIsBandPage(true);
+    else setIsBandPage(false);
+  }, [location]);
+
+  const renderBackIcon = (): ReactElement => (
+    <ActionItem onClick={() => navigate(PATHS.HOME)}>
+      <RiArrowLeftSLine size={25} />
+    </ActionItem>
+  );
+
+  const renderFilter = (): ReactElement => (
+    <>
+      <LogoWrapper
+        onClick={() => {
+          navigate(PATHS.HOME);
+        }}
+      >
+        <Title>Isobar</Title>
+      </LogoWrapper>
+      <Input onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFilter(e.target.value)} />
+    </>
+  );
 
   return (
     <NavbarWrapper data-testid="navbar">
       <TopContainer>
-        <LogoWrapper
-          onClick={() => {
-            navigate(PATHS.HOME);
-          }}
-        >
-          <Title>Isobar</Title>
-        </LogoWrapper>
-        <Input onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFilter(e.target.value)} />
+        {isBandPage ? renderBackIcon() : renderFilter()}
         <ActionsWrapper>
           <ActionItem onClick={handleChangeThemeClick}>
             {theme === ThemeTypes.dark ? <BsCloudSun size={25} /> : <BsMoonStars size={25} />}
