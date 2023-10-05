@@ -7,6 +7,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: path.join(__dirname, "..", "src", "index.tsx"),
   output: {
+    publicPath: "/",
     path: path.join(__dirname, "..", "dist"),
     filename: "[name].[contenthash].js",
     chunkFilename: "[name].[contenthash].js",
