@@ -1,4 +1,5 @@
-import { getColorByTheme, getFontWeight, getSize } from "react-styled-guide";
+import { LuSearchX } from "react-icons/lu";
+import { getColorByTheme, getFontSize, getFontWeight, getSize } from "react-styled-guide";
 import styled from "styled-components";
 
 export const List = styled.ul`
@@ -43,5 +44,28 @@ export const Description = styled.p`
   color: ${getColorByTheme(
     ({ neutral }) => neutral.tinyDark,
     ({ neutral }) => neutral.tinyLight
+  )};
+`;
+
+export const NoItemsWrapper = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const NoItemsIcon = styled(LuSearchX)`
+  color: ${getColorByTheme(
+    ({ neutral }) => neutral.darker,
+    ({ neutral }) => neutral.lighter
+  )};
+`;
+
+export const NoItemsText = styled.p`
+  font-size: ${getFontSize(({ m }) => m)};
+  color: ${getColorByTheme(
+    ({ neutral }) => neutral.darker,
+    ({ neutral }) => neutral.lighter
   )};
 `;

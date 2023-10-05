@@ -9,7 +9,7 @@ import { Band } from "~/entities/band";
 import { useApp } from "~/state/app/hook";
 
 const Home: React.FC = () => {
-  const { bandService, setIsLoading, filter } = useApp();
+  const { bandService, isLoading, setIsLoading, filter } = useApp();
   const navigate = useNavigate();
   const [bands, setBands] = useState<CardItemType[]>([]);
   const [filteredBands, setFilteredBands] = useState<CardItemType[]>(bands);
@@ -75,7 +75,9 @@ const Home: React.FC = () => {
   return (
     <>
       <Order count={filteredBands.length} onOrderChange={setSelectedOrder} />
-      <CardList items={filteredBands} onItemClick={(item) => navigate(`band/${item.id}`)} />
+      {!isLoading && (
+        <CardList items={filteredBands} onItemClick={(item) => navigate(`band/${item.id}`)} />
+      )}
     </>
   );
 };
